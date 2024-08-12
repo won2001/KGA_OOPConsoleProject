@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextSurvival", "TextSurvival.csproj", "{1695BEF9-EA09-439F-BF5C-2A9E8555E737}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1695BEF9-EA09-439F-BF5C-2A9E8555E737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1695BEF9-EA09-439F-BF5C-2A9E8555E737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1695BEF9-EA09-439F-BF5C-2A9E8555E737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1695BEF9-EA09-439F-BF5C-2A9E8555E737}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C30B6C4B-E4F6-4D9C-9543-ABCDE2E95A5C}
+	EndGlobalSection
+EndGlobal
