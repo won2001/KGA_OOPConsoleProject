@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TextSurvival.Monsters;
 
-namespace TextSurvival.Player
+namespace TextSurvival.Players
 {
     public class Soldier : Player
     {
