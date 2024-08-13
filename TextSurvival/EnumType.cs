@@ -11,6 +11,7 @@
         Battle,
         Inventory,
         SuspiciousTent,
+        SuspiciousDoor,
         GameOver,
         Size
     }
