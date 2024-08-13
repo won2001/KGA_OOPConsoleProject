@@ -4,6 +4,7 @@
     {
         Title,
         Select,
+        Campsite,
         Forest,
         Ocean,
         AbandonedCity,
@@ -13,6 +14,6 @@
         GameOver,
         Size
     }
-    public enum Job { Soldier = 1, Doctor, Scientist, Magician, Architect }
+    public enum Job { Soldier = 1, Doctor, Scamp, Magician}
 
 }

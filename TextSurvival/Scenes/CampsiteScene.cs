@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TextSurvival.Scenes
 {
-    internal class CampsiteScene
+    public class CampsiteScene
     {
+        public CampsiteScene(Game game)
+        {
+
+        }
     }
 }
