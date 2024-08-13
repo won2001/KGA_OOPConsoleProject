@@ -27,7 +27,15 @@ namespace TextSurvival.Scenes
         }
         public override void Render()
         {
-
+            Console.Clear();
+            Console.WriteLine("========================================");
+            Console.WriteLine("I                                      I");
+            Console.WriteLine("I                                      I");
+            Console.WriteLine("I                OutLand               I");
+            Console.WriteLine("I                                      I");
+            Console.WriteLine("I                                      I");
+            Console.WriteLine("========================================");
+            Console.WriteLine();
         }
         public override void Update()
         {
