@@ -6,7 +6,6 @@
         Select,
         Campsite,
         Forest,
-        Ocean,
         AbandonedCity,
         Battle,
         Inventory,

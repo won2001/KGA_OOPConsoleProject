@@ -56,7 +56,6 @@ namespace TextSurvival
             scenes[(int)SceneType.Select] = new SelectScene(this);
             scenes[(int)SceneType.Campsite] = new CampsiteScene(this);
             scenes[(int)SceneType.Forest] = new ForestScene(this);
-            scenes[(int)SceneType.Ocean] = new OceanScene(this);
             scenes[(int)SceneType.AbandonedCity] = new AbandonedCityScene(this);
             scenes[(int)SceneType.Battle] = new BattleScene(this);
             scenes[(int)SceneType.Inventory] = new InventoryScene(this);

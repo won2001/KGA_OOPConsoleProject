@@ -21,11 +21,11 @@ namespace TextSurvival.Scenes
         }
         public override void Input()
         {
-            throw new NotImplementedException();
+            
         }
         public override void Render()
         {
-            throw new NotImplementedException();
+            
         }
         public override void Update()
         {

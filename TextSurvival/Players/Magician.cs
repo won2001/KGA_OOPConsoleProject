@@ -15,7 +15,8 @@ namespace TextSurvival.Players
                 this.name = name;
                 this.job = Job.Magician;
                 this.maxHP = 100;
-                this.maxEndurance = 50;
+                this.curHP = maxHP;
+                this.endurance = 50;
                 this.strength = 10;
                 this.intelligence = 30;
                 this.handicraft = 50;
@@ -24,7 +25,7 @@ namespace TextSurvival.Players
         }
         public override void Skill(Monster monster)
         {
-            throw new NotImplementedException();
+
         }
     }
 }

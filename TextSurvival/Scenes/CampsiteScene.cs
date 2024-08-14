@@ -47,18 +47,15 @@ namespace TextSurvival.Scenes
                     game.ChangeScene(SceneType.Forest);
                     break;
                 case "2":
-                    game.ChangeScene(SceneType.Ocean);
-                    break;
-                case "3":
                     game.ChangeScene(SceneType.AbandonedCity);
                     break;
-                case "4":
+                case "3":
                     game.ChangeScene(SceneType.SuspiciousDoor);
                     break;
-                case "5":
+                case "4":
                     game.ChangeScene(SceneType.SuspiciousTent);
                     break;
-                case "6":
+                case "5":
                     game.ChangeScene(SceneType.Inventory);
                     break;
 

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace TextSurvival.Monsters
 {
-    public class Monster
+    public abstract class Monster
     {
-        public string Name;
-        public int hp;
-        public int attack;
-        public int defense;
+        public string name;
+        public int maxHP;
+        public int curHP;
+        public int strength;
+        public int intelligence;
     }
 }

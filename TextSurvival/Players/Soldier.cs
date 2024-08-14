@@ -14,7 +14,8 @@ namespace TextSurvival.Players
             this.name = name;
             this.job = Job.Soldier;
             this.maxHP = 300;
-            this.maxEndurance = 150;
+            this.curHP = maxHP;
+            this.endurance = 150;
             this.strength = 35;
             this.intelligence = 30;
             this.handicraft = 20;
@@ -23,7 +24,7 @@ namespace TextSurvival.Players
 
         public override void Skill(Monster monster)
         {
-            Console.WriteLine("총구로 때리기");
+
         }
     }
 }

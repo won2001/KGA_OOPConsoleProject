@@ -23,7 +23,7 @@ namespace TextSurvival.Scenes
         public override void Input()
         {
             Console.WriteLine("     계속하려면 아무키나 누르세요     ");
-            Console.ReadLine();
+            Console.ReadKey();
         }
         public override void Render()
         {

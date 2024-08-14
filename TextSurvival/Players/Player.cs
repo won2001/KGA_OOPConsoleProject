@@ -20,16 +20,13 @@ namespace TextSurvival.Players
         public int CurHP { get { return curHP; } }
 
         protected int maxHP;
-        public int MaxHP { get { return MaxHP; } }
+        public int MaxHP { get { return maxHP; } }
 
         protected int strength;
         public int Strength { get { return strength; } }
 
-        protected int maxEndurance;
-        public int MaxEndurance { get { return maxEndurance; } }
-
-        protected int curEndurance;
-        public int CurEndurance { get{ return curEndurance; } }
+        protected int endurance;
+        public int Endurance { get { return endurance; } }
 
         protected int intelligence;
         public int Intelligence { get { return intelligence; } }
@@ -47,8 +44,8 @@ namespace TextSurvival.Players
             Console.SetCursorPosition(0, 12);
             Console.WriteLine("=========================================");
             Console.WriteLine($" 이름 : {name,-6} 직업 : {job,-6}");
-            Console.WriteLine($" 체력 : {curHP,+3} / {maxHP}  스태미나 : {curEndurance} / {maxEndurance}");
-            Console.WriteLine($" 스탯 : 힘({strength}) 지능({intelligence}) 손재주({handicraft})");
+            Console.WriteLine($" 체력 : {curHP,+3} / {maxHP}");
+            Console.WriteLine($" 스탯 : 힘({strength}) 지능({intelligence}) 지구력({endurance}) 손재주({handicraft})");
             Console.WriteLine($" 소지골드 : {gold} G");
             Console.WriteLine("=========================================");
             Console.WriteLine();

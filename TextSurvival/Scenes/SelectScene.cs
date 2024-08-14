@@ -23,7 +23,6 @@ namespace TextSurvival.Scenes
         }
         public override void Exit()
         {
-            input = Console.ReadLine();
         }
         public override void Input()
         {
@@ -43,16 +42,17 @@ namespace TextSurvival.Scenes
                 Console.WriteLine("2. 의사");
                 Console.WriteLine("3. 건달");
                 Console.WriteLine("4. 마술사");
-                Console.Write("선택할 직업 : ");
+                Console.Write("직업을 선택하세요 : ");
             }
             else if (curState == State.Confirm)
             {
+                
                 Console.WriteLine("=====================");
                 Console.WriteLine($"이름 : {game.Player.Name}");
                 Console.WriteLine($"직업 : {game.Player.Job}");
                 Console.WriteLine($"체력 : {game.Player.MaxHP}");
                 Console.WriteLine($"힘 : {game.Player.Strength}");
-                Console.WriteLine($"지구력 : {game.Player.MaxEndurance}");
+                Console.WriteLine($"지구력 : {game.Player.Endurance}");
                 Console.WriteLine($"지능 : {game.Player.Intelligence}");
                 Console.WriteLine($"손재주 : {game.Player.Handicraft}");
                 Console.WriteLine($"소지금 : {game.Player.Gold}");
@@ -75,6 +75,7 @@ namespace TextSurvival.Scenes
             {
                 if (Job.TryParse(input, out Job select) == false)
                     return;
+
                 if (Enum.IsDefined(typeof(Job), select) == false)
                     return;
 

@@ -15,7 +15,8 @@ namespace TextSurvival.Players
                 this.name = name;
                 this.job = Job.Scamp;
                 this.maxHP = 200;
-                this.maxEndurance = 100;
+                this.curHP = maxHP;
+                this.endurance = 100;
                 this.strength = 50;
                 this.intelligence = 10;
                 this.handicraft = 5;
@@ -24,7 +25,7 @@ namespace TextSurvival.Players
         }
         public override void Skill(Monster monster)
         {
-            throw new NotImplementedException();
+
         }
     }
 }
