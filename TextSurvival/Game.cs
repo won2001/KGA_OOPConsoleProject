@@ -61,6 +61,7 @@ namespace TextSurvival
             scenes[(int)SceneType.Inventory] = new InventoryScene(this);
             scenes[(int)SceneType.SuspiciousTent] = new SuspiciousTentScene(this);
             scenes[(int)SceneType.SuspiciousDoor] = new SuspiciousDoorScene(this);
+            scenes[(int)SceneType.Battle] = new BattleScene(this);
 
             curScene = scenes[(int)SceneType.Title];
             curScene.Enter();

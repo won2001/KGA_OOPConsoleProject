@@ -32,11 +32,10 @@ namespace TextSurvival.Scenes
             Console.WriteLine("따뜻한 모닥불이 있는 야영지이다.");
             Console.WriteLine("어디로 이동하겠습니까?");
             Console.WriteLine("1. 숲");
-            Console.WriteLine("2. 바다");
-            Console.WriteLine("3. 폐도시");
-            Console.WriteLine("4. 수상한 문");
-            Console.WriteLine("5. 수상한 텐트");
-            Console.WriteLine("6. 현재 인벤토리를 본다");
+            Console.WriteLine("2. 폐도시");
+            Console.WriteLine("3. 수상한 문");
+            Console.WriteLine("4. 수상한 텐트");
+            Console.WriteLine("5. 현재 인벤토리를 본다");
             Console.Write("선택 : ");
         }
         public override void Update()

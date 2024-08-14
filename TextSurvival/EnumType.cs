@@ -15,5 +15,6 @@
         Size
     }
     public enum Job { Soldier = 1, Doctor, Scamp, Magician}
+    public enum MonsterType { Bear = 1, WildBoar, Weirdo }
 
 }
