@@ -9,19 +9,21 @@ namespace TextSurvival.Players
 {
     public class Soldier : Player
     {
-        public Soldier()
+        public Soldier(string name)
         {
             this.name = name;
             this.job = Job.Soldier;
-            this.maxHP = 150;
-            this.attack = 50;
-            this.defense = 30;
-            this.gold = 100;
+            this.maxHP = 300;
+            this.maxEndurance = 150;
+            this.strength = 35;
+            this.intelligence = 30;
+            this.handicraft = 20;
+            this.gold = 2000;
         }
 
         public override void Skill(Monster monster)
         {
-            Console.WriteLine("수류탄 투척")
+            Console.WriteLine("총구로 때리기");
         }
     }
 }

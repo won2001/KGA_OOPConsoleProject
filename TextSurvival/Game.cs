@@ -19,7 +19,7 @@ namespace TextSurvival
         public Scene CurSCene { get {  return curScene; } }
 
         private Player player;
-        public Player Player { get { return player; } }
+        public Player Player { get { return player; } set { player = value; } }
 
 
 

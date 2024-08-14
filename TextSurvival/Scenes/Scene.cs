@@ -8,7 +8,7 @@ namespace TextSurvival.Scenes
 {
     public abstract class Scene
     {
-        protected Game game;
+        public Game game;
 
         public Scene(Game game)
         {

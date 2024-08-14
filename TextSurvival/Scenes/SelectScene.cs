@@ -43,6 +43,7 @@ namespace TextSurvival.Scenes
                 Console.WriteLine("2. 의사");
                 Console.WriteLine("3. 건달");
                 Console.WriteLine("4. 마술사");
+                Console.Write("선택할 직업 : ");
             }
             else if (curState == State.Confirm)
             {
@@ -51,7 +52,7 @@ namespace TextSurvival.Scenes
                 Console.WriteLine($"직업 : {game.Player.Job}");
                 Console.WriteLine($"체력 : {game.Player.MaxHP}");
                 Console.WriteLine($"힘 : {game.Player.Strength}");
-                Console.WriteLine($"지구력 : {game.Player.Endurance}");
+                Console.WriteLine($"지구력 : {game.Player.MaxEndurance}");
                 Console.WriteLine($"지능 : {game.Player.Intelligence}");
                 Console.WriteLine($"손재주 : {game.Player.Handicraft}");
                 Console.WriteLine($"소지금 : {game.Player.Gold}");
@@ -76,6 +77,7 @@ namespace TextSurvival.Scenes
                     return;
                 if (Enum.IsDefined(typeof(Job), select) == false)
                     return;
+
                 switch (select)
                 {
                     case Job.Soldier:
