@@ -12,14 +12,14 @@ namespace TextSurvival.Players
         public Magician(string name)
         {
             {
-                this.name = name;
-                this.job = Job.Magician;
-                this.maxHP = 100;
-                this.curHP = maxHP;
-                this.endurance = 50;
-                this.strength = 10;
-                this.intelligence = 30;
-                this.handicraft = 50;
+                this.Name = name;
+                this.Job = Job.Magician;
+                this.MaxHP = 100;
+                this.CurHP = MaxHP;
+                this.Endurance = 50;
+                this.Strength = 10;
+                this.Intelligence = 30;
+                this.Handicraft = 50;
                 this.gold = 5000;
             }
         }

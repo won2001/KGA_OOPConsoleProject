@@ -16,7 +16,7 @@ namespace TextSurvival.Inventorys.Items
         }
         public void Use(Player user)
         {
-            user.curHP += curHP;
+            user.CurHP += curHP;
             Console.WriteLine("물약을 마셨다.");
             Console.WriteLine(Effect);
         }

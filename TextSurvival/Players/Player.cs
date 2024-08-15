@@ -12,30 +12,22 @@ namespace TextSurvival.Players
     public class Player
     {
         private Inventory inven;
-        protected string name;
 
-        public string Name { get { return name; } }
+        public string Name { get; set; }
 
-        protected Job job;
-        public Job Job { get { return job; } }
+        public Job Job { get; set; }
 
-        public int curHP;
-        public int CurHP { get { return curHP; } }
+        public int CurHP { get; set; }
 
-        protected int maxHP;
-        public int MaxHP { get { return maxHP; } }
+        public int MaxHP { get; set; }
 
-        protected int strength;
-        public int Strength { get { return strength; } }
+        public int Strength { get; set; }
 
-        protected int endurance;
-        public int Endurance { get { return endurance; } }
+        public int Endurance { get; set; }
 
-        protected int intelligence;
-        public int Intelligence { get { return intelligence; } }
+        public int Intelligence { get; set; }
 
-        protected int handicraft;
-        public int Handicraft { get { return handicraft; } }
+        public int Handicraft { get; set; }
 
         protected int gold;
         public int Gold {  get  => gold;  set { gold = value; } }
@@ -99,9 +91,9 @@ namespace TextSurvival.Players
         {
             Console.SetCursorPosition(0, 12);
             Console.WriteLine("=========================================");
-            Console.WriteLine($" 이름 : {name,-6} 직업 : {job,-6}");
-            Console.WriteLine($" 체력 : {curHP,+3} / {maxHP}");
-            Console.WriteLine($" 스탯 : 힘({strength}) 지능({intelligence}) 지구력({endurance}) 손재주({handicraft})");
+            Console.WriteLine($" 이름 : {Name,-6} 직업 : {Job,-6}");
+            Console.WriteLine($" 체력 : {CurHP,+3} / {MaxHP}");
+            Console.WriteLine($" 스탯 : 힘({Strength}) 지능({Intelligence}) 지구력({Endurance}) 손재주({Handicraft})");
             Console.WriteLine($" 소지골드 : {gold} G");
             Console.WriteLine("=========================================");
             Console.WriteLine();

@@ -12,14 +12,14 @@ namespace TextSurvival.Players
         public Scamp(string name)
         {
             {
-                this.name = name;
-                this.job = Job.Scamp;
-                this.maxHP = 200;
-                this.curHP = maxHP;
-                this.endurance = 100;
-                this.strength = 50;
-                this.intelligence = 10;
-                this.handicraft = 5;
+                this.Name = name;
+                this.Job = Job.Scamp;
+                this.MaxHP = 200;
+                this.CurHP = MaxHP;
+                this.Endurance = 100;
+                this.Strength = 50;
+                this.Intelligence = 10;
+                this.Handicraft = 5;
                 this.gold = 2000;
             }
         }

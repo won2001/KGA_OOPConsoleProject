@@ -11,14 +11,14 @@ namespace TextSurvival.Players
     {
         public Soldier(string name)
         {
-            this.name = name;
-            this.job = Job.Soldier;
-            this.maxHP = 300;
-            this.curHP = maxHP;
-            this.endurance = 150;
-            this.strength = 35;
-            this.intelligence = 30;
-            this.handicraft = 20;
+            this.Name = name;
+            this.Job = Job.Soldier;
+            this.MaxHP = 300;
+            this.CurHP = MaxHP;
+            this.Endurance = 150;
+            this.Strength = 35;
+            this.Intelligence = 30;
+            this.Handicraft = 20;
             this.gold = 2000;
         }
 

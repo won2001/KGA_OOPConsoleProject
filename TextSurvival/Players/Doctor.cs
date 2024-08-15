@@ -11,14 +11,14 @@ namespace TextSurvival.Players
     {
         public Doctor(string name)
         {
-            this.name = name;
-            this.job = Job.Doctor;
-            this.maxHP = 150;
-            this.curHP = maxHP;
-            this.endurance = 50;
-            this.strength = 15;
-            this.intelligence = 50;
-            this.handicraft = 30;
+            this.Name = name;
+            this.Job = Job.Doctor;
+            this.MaxHP = 150;
+            this.CurHP = MaxHP;
+            this.Endurance = 50;
+            this.Strength = 15;
+            this.Intelligence = 50;
+            this.Handicraft = 30;
             this.gold = 3000;
         }
         //public override void Skill(Monster monster)
