@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TextSurvival.Inventorys;
+using TextSurvival.Inventorys.Items;
 using TextSurvival.Monsters;
 
 namespace TextSurvival.Players
 {
-    public abstract class Player
+    public class Player
     {
+        private Inventory inven;
         protected string name;
 
         public string Name { get { return name; } }
@@ -16,7 +19,7 @@ namespace TextSurvival.Players
         protected Job job;
         public Job Job { get { return job; } }
 
-        protected int curHP;
+        public int curHP;
         public int CurHP { get { return curHP; } }
 
         protected int maxHP;
@@ -35,9 +38,62 @@ namespace TextSurvival.Players
         public int Handicraft { get { return handicraft; } }
 
         protected int gold;
-        public int Gold {  get { return gold; } set { gold = value; } }
+        public int Gold {  get  => gold;  set { gold = value; } }
+        public int InvenCount => inven.ItemCount;
 
-        public abstract void Skill(Monster monster);
+        public bool GeinItem(Item item)
+        {
+            if(item is IGainable)
+            {
+                IGainable gainable = (IGainable)item;
+                gainable.Gain(this);
+            }
+            return inven.AddItem(item);
+        }
+
+        public void LoseItem(int index)
+        {
+            Item item = inven.GetItem(index);
+            if (item is IGainable)
+            {
+                IGainable gainable = (IGainable)item;
+                gainable.Lose(this);
+            }
+            inven.RemoveItem(index);
+            
+        }
+        public void UseItem(Item item)
+        {
+            if (item is IUsable)
+            {
+                if (item is IUsable)
+                {
+                    IUsable usable = (IUsable)item;
+                    usable.Use(this);
+                    inven.RemoveItem(item);
+                }
+                else
+                {
+                    Console.WriteLine($"{item.name}은 사용할 수 없습니다.");
+
+                }
+            }
+        }
+        public void UseItem(int index)
+        {
+            Item itme = inven.GetItem( index );
+            UseItem(itme);
+        }
+        public void GainGold(int gold)
+        {
+            this.gold = gold;
+        }
+        public void LoseGold(int gold)
+        {
+            this.gold -= gold;
+        }
+
+        //public void Skill(Monster monster);
 
         public void ShowInfo()
         {
@@ -50,6 +106,14 @@ namespace TextSurvival.Players
             Console.WriteLine("=========================================");
             Console.WriteLine();
             Console.SetCursorPosition(0, 0);
+        }
+        public void ShowInventory()
+        {
+            inven.ShowAllItem();
+        }
+        public Item GetItem(int index)
+        {
+            return inven.GetItem(index);
         }
     }
 }

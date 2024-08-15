@@ -21,9 +21,9 @@ namespace TextSurvival.Players
             this.handicraft = 30;
             this.gold = 3000;
         }
-        public override void Skill(Monster monster)
-        {
-
-        }
+        //public override void Skill(Monster monster)
+        //{
+        //
+        //}
     }
 }

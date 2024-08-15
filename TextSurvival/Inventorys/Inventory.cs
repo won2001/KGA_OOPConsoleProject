@@ -59,7 +59,6 @@ namespace TextSurvival.Inventorys
             for (int i = 0; i < items.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {items[i].name}");
-                Console.WriteLine($" 공격력 : {items[i].attack}");
                 Console.WriteLine($" 설명 : {items[i].description}");
                 Console.WriteLine($" 효과 : {items[i].effect}"); 
                 Console.WriteLine();

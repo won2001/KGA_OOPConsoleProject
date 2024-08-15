@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TextSurvival.Inventorys;
+using TextSurvival.Players;
 
 namespace TextSurvival.Scenes
 {
-    internal class InventoryScene : Scene
+    public class InventoryScene : Scene
     {
+        private Player player;
+        private ConsoleKey input;
         public InventoryScene(Game game) : base(game)
         {
         }
@@ -24,7 +27,8 @@ namespace TextSurvival.Scenes
         }
         public override void Input()
         {
-            Console.ReadKey();
+            input = Console.ReadKey().Key;
+            
         }
         public override void Render()
         {
@@ -33,10 +37,26 @@ namespace TextSurvival.Scenes
             Console.WriteLine("아이템 목록 ");
             Console.WriteLine($"소지금 : {game.Player.Gold}G");
 
+            //player.ShowInventory();
+
+            Console.Write("사용할 아이템을 선택하세요");
 
         }
         public override void Update()
         {
+            int inputValue = (int)input - (int)ConsoleKey.D0;
+            if (input == ConsoleKey.D0)
+            {
+                game.ChangeScene(SceneType.Campsite);
+            }
+            else if (1 <= inputValue && inputValue <= player.InvenCount)
+            {
+                player.UseItem(inputValue - 1);
+            }
+            else
+            {
+                
+            }
         }
     }
 }
