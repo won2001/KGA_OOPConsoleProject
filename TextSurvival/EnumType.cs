@@ -8,8 +8,10 @@
         Forest,
         AbandonedCity,
         Battle,
+        Buy,
+        Sell,
         Inventory,
-        SuspiciousTent,
+        SecretTent,
         SuspiciousDoor,
         GameOver,
         Size

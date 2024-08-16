@@ -52,7 +52,7 @@ namespace TextSurvival.Scenes
                     game.ChangeScene(SceneType.SuspiciousDoor);
                     break;
                 case "4":
-                    game.ChangeScene(SceneType.SuspiciousTent);
+                    game.ChangeScene(SceneType.SecretTent);
                     break;
                 case "5":
                     game.ChangeScene(SceneType.Inventory);

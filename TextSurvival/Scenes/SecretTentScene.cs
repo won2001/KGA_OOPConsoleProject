@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TextSurvival.Players;
+using TextSurvival.Shops;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace TextSurvival.Scenes
 {
-    public class ForestScene : Scene
-    {
+    public class SecretTentScene : Scene
+    { 
+        private ConsoleKey inputKey;
         private string input;
-        public ForestScene(Game game) : base(game)
+        private Shop shop;
+        private Player player;
+
+        public SecretTentScene(Game game) : base(game)
         {
         }
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine("숲으로 이동합니다...");
+            Console.WriteLine("수상한 텐트로 이동합니다...");
             Thread.Sleep(1000);
         }
-        public override void Exit()
+        public override void Exit() 
         {
-
         }
         public override void Input()
         {
@@ -29,23 +35,29 @@ namespace TextSurvival.Scenes
         public override void Render()
         {
             Console.Clear();
-            Console.WriteLine("숲의 한 가운데에 도착했습니다.");
+            Console.WriteLine("건장한 잡상인이 있다.");
             Console.WriteLine("무엇을 하시겠습니까?");
-            Console.WriteLine("1. 야영지로 돌아간다.");
-            Console.WriteLine("2. 더 깊이 들어가본다.");
+            Console.WriteLine("1. 아이템 구매");
+            Console.WriteLine("2. 아이템 판매");
             Console.Write("선택 : ");
+
         }
+
+        
         public override void Update()
         {
             switch (input)
             {
                 case "1":
-                    game.ChangeScene(SceneType.Campsite);
+                    game.ChangeScene(SceneType.Buy);
                     break;
                 case "2":
-                    game.ChangeScene(SceneType.Battle);
+                    game.ChangeScene(SceneType.Sell);
                     break;
+
             }
         }
+        
     }
 }
+

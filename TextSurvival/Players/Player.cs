@@ -33,7 +33,7 @@ namespace TextSurvival.Players
         public int Gold {  get  => gold;  set { gold = value; } }
         public int InvenCount => inven.ItemCount;
 
-        public bool GeinItem(Item item)
+        public bool GainItem(Item item)
         {
             if(item is IGainable)
             {
@@ -52,7 +52,15 @@ namespace TextSurvival.Players
                 gainable.Lose(this);
             }
             inven.RemoveItem(index);
-            
+        }
+        public void LoseItem(Item item)
+        {
+            if (item is IGainable)
+            {
+                IGainable gainable = (IGainable)item;
+                gainable.Lose(this);
+            }
+            inven.RemoveItem(item);
         }
         public void UseItem(Item item)
         {
