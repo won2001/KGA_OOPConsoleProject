@@ -14,7 +14,7 @@ namespace TextSurvival.Shops
 
         public Shop()
         {
-            items = new Item[3];
+            items = new Item[2];
             items[0] = new Key();
             items[1] = new Potion();
         }
