@@ -13,11 +13,10 @@ namespace TextSurvival.Scenes
     public class SecretTentScene : Scene
     { 
         private ConsoleKey inputKey;
-        private int input;
         private Shop shop;
         private Player player;
         private bool isRunning;
-        enum ShopScene { Buy, Sell};
+        enum ShopScene {  Buy, Sell};
         ShopScene shopScene;
         public SecretTentScene(Game game) : base(game)
         {
@@ -46,7 +45,7 @@ namespace TextSurvival.Scenes
                     case ShopScene.Sell:
                         SellUpdate();
                         break;
-                }
+                }//구매 창 판매 창으로 안넘어가는 오류 고치기
             }
         }
         public override void Input()
@@ -56,9 +55,9 @@ namespace TextSurvival.Scenes
         public override void Render()
         {
             Console.Clear();
-            Console.WriteLine("********************");
-            Console.WriteLine("*    아이템 상점   *");
-            Console.WriteLine("********************");
+            Console.WriteLine(" ====================");
+            Console.WriteLine("I       상점        I");
+            Console.WriteLine(" ====================");
             Console.WriteLine();
             Console.WriteLine("======= 상점 메뉴 =======");
             Console.WriteLine("1. 아이템 구매");

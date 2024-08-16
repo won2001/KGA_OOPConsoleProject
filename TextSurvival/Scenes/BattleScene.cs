@@ -13,6 +13,16 @@ namespace TextSurvival.Scenes
         }
         public override void Enter()
         {
+        }
+        public override void Exit() 
+        {
+        }
+        public override void Input()
+        {
+            
+        }
+        public override void Render()
+        {
             Random rand = new Random();
             int randMonster = rand.Next(1, 4);
             switch (randMonster)
@@ -28,20 +38,9 @@ namespace TextSurvival.Scenes
                     break;
             }
         }
-        public override void Exit() 
-        {
-        }
-        public override void Input()
-        {
-            
-        }
-        public override void Render()
-        {
-            
-        }
         public override void Update()
         {
-            
+            //반복문으로 전투신 구현
         }
     }
 }

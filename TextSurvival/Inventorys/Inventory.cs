@@ -9,7 +9,7 @@ namespace TextSurvival.Inventorys
 {
     public class Inventory
     {
-        public const int MAX_ITEM = 6;
+        public const int MAX_ITEM = 5;
 
         private List<Item> items;
 
@@ -41,7 +41,7 @@ namespace TextSurvival.Inventorys
         {
             if (index < 0 || items.Count <= index)
             {
-                Console.WriteLine("범위를 벗어나는 아이템을 삭제할 순 없습니다.");
+                Console.WriteLine("삭제할 수 없습니다.");
                 return false;
             }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using TextSurvival.Inventorys;
@@ -28,6 +29,8 @@ namespace TextSurvival.Players
         public int Intelligence { get; set; }
 
         public int Handicraft { get; set; }
+
+        public int hit {  get; set; }
 
         protected int gold;
         public int Gold {  get  => gold;  set { gold = value; } }
@@ -93,7 +96,7 @@ namespace TextSurvival.Players
             this.gold -= gold;
         }
 
-        //public void Skill(Monster monster);
+        //public void Skill(Monster monster); List를 사용해 스킬구현하기
 
         public void ShowInfo()
         {
@@ -114,6 +117,22 @@ namespace TextSurvival.Players
         public Item GetItem(int index)
         {
             return inven.GetItem(index);
+        }
+        public void TakeDamage(int damage)
+        {
+            if (damage > hit)
+            {
+                Console.WriteLine($"{damage - hit} 데미지를 받았다!");
+                CurHP -= damage - hit;
+            }
+            else
+                Console.WriteLine();
+
+            if (CurHP <= 0)
+            {
+                Console.WriteLine("당신은 쓰려졌다!");
+
+            }
         }
     }
 }

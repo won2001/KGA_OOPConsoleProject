@@ -34,8 +34,8 @@ namespace TextSurvival.Scenes
         {
             Console.Clear();
             Console.WriteLine($"{game.Player.Name}인벤토리");
-            Console.WriteLine("아이템 목록 ");
             Console.WriteLine($"소지금 : {game.Player.Gold}G");
+            Console.WriteLine("아이템 목록 ");
 
             //player.ShowInventory();
 
